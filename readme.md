@@ -2,7 +2,7 @@
 ---
 
 # Developer Self-QA
-Validate content and design. Validate every updated page of the site against the:
+Validate content and layout. Validate every updated page of the site against the:
 - Content manuscript
 - SEO/Metadata document (if not in the manuscript)
 - Wireframes
@@ -50,7 +50,12 @@ This validation occurs after the developer has first QA'd the page themselves an
 Check the site build for HTMLHint errors and warnings. If the site's build process does not use HTMLHint check for errors with an extension to your code editor.
 
 #### W3C Markup Validation Service
-Copy/paste the generated HTML code to validate with the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input)
+Use the W3C validation service. The Validation service can be used with a browser extension:
+- [Validity](https://chrome.google.com/webstore/detail/validity/bbicmjjbohdfglopkidebfccilipgeif?hl=en-GB) for Chrome
+- [HTML Validator](http://users.skynet.be/mgueury/mozilla/download_090.html) for Firefox
+
+The validation service can also be used through a [package or application](https://validator.w3.org/source/):
+- [Validator S.A.C](https://habilis.net/validator-sac/) for Mac OS
 
 #### Web Tactic Guardrails
 Check that Web Tactic Guardrails are generally followed. <https://github.com/tmoserfusion/web-tactic-guardrails/blob/master/html/01_overview.md>
@@ -160,7 +165,7 @@ While testing, report any bugs as comments in the issue with screenshots.
 ```
 
 ## Analytics
-Validate the following items are added:
+Validate that the following items are added:
 - Google Tag Manager container
 - Google webmaster tools verification
 - msvalidate verification tag
