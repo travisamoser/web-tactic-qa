@@ -1,8 +1,6 @@
 # To Do
 
-Task list for Webtech check
-
-Task list for Vulnerability Scan
+Solidify browser list
 
 Investigate automating tasks with PhantomJS
 - Scrape and compile page title, meta tags, OG tags, image alt tags, svg title tags into a report for comparing with Manuscript/SEO doc?
