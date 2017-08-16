@@ -1,8 +1,9 @@
 # Web Tactic QA
 
 ## Table of Contents
-### [Developer self-QA](#developer-self-qa)
-### [Peer QA](#peer-qa)
+**[Developer self-QA](#developer-self-qa)**
+
+**[Peer QA](#peer-qa)**
 1. [Content and layout](#content-and-layout)
 2. [Analytics](#analytics)
 3. [Redirects](#redirects)
@@ -11,8 +12,11 @@
 6. [Forms](#forms)
 7. [Broken or redirected assets and links](#broken-or-redirected-assets-and-links)
 8. [Code](#code)
+
     8.1. [HTML](#html)
+
     8.2. [JavaScript](#javascript)
+
     8.2. [Sass/CSS](#sasscss)
 9. [Misc](#misc)
 10. [Browsers](#browsers)
