@@ -41,14 +41,14 @@ QA: {pagename} content and layout
 DESCRIPTION:
 Validate page against:
 - [ ] Content manuscript
-      - [ ] Footer MMN number is updated
-      - [ ] The page has links to the label components (PI, PPI, UG, MG)
+  - [ ] Footer MMN number is updated
+  - [ ] The page has links to the label components (PI, PPI, UG, MG)
   - [ ] `<h1>` tag (at least one per page)
 - [ ] SEO/Metadata document (if not in the manuscript)
-      - [ ] `alt` attributes for all images
-      - [ ] `<title>` tag content
-      - [ ] meta description tag content
-      - [ ] OG tags content (if required)
+  - [ ] `alt` attributes for all images
+  - [ ] `<title>` tag content
+  - [ ] meta description tag content
+  - [ ] OG tags content (if required)
 - [ ] Wireframes
 - [ ] Desktop PSD
 - [ ] Mobile PSD
