@@ -94,7 +94,7 @@ Verify analytics configuration:
 - [ ] robots.txt file in the site root
 - [ ] link to sitemap.xml file in robots.txt file
 - [ ] valid disallow rules in the robots.txt file
-- [ ] sitemap.xml file is in the site root and URLs are all valid
+- [ ] sitemap.xml file in the site root
 - [ ] valid URLs in the sitemap.xml file
 - [ ] correct values for webtrends (DCSiD, fpcdom, and onsitedom parameters)
 
@@ -132,7 +132,13 @@ COMMENTS:
 If an orphan check is not included in the site's build process, use `wget` to check for orphans. The following command will scrape the entire site and download all files necessary for the site. Compare the scraped site to your development folder to identify potential orphans:
 
 ```
-wget -r -E -k -p -D folderName http://www.google.com/
+wget -r -E -k -p -D http://www.google.com/ http://www.google.com/
+```
+
+If the site is behind authentication, use this command:
+
+```
+wget -r -E -k -p -D http://www.google.com/ http://www.google.com/ --user=XXXX.XXXX --password=XXXXXX --auth-no-challenge
 ```
 
 Create a GitHub issue for an orphan check. Here is a template:
