@@ -354,14 +354,15 @@ COMMENTS:
 ```
 
 ## Browsers
-The list of supported browsers will vary based on the project, so confirm the list. Here is a general guide.
+Listed below are all currently supported browser/OS combinations. At the start of the project, the developer should confirm this list in hopes of eliminating some.
 
 Because it is used for taking screenshots, `Chrome on Mac with devtools simulting iPhone 6` is the first priority.
 - Chrome on Mac with devtools simulating iPhone 6 - **FIRST PRIORITY**
 - Edge on Windows 10
-- IE11 on Windows 7 or 8
-- Chrome (latest) on Windows 7 or 8
-- Firefox (latest) on Windows 7 or 8
+- IE11 on Windows 8
+- IE10 on Windows 7
+- Chrome (latest) on Windows 7
+- Firefox (latest) on Windows 7
 - Safari 10 on Mac OS 10.12
 - Safari on iOS 10.3
 - Safari on iOS 9.3
@@ -369,6 +370,8 @@ Because it is used for taking screenshots, `Chrome on Mac with devtools simultin
 - Chrome (latest) on Android 6.0
 - Chrome (latest) on Android 5.1
 - Android Webview on Android 4.4
+- Amazon Silk on Fire OS v5
+- Amazon Silk on Fire OS v4
 
 Create a GitHub issue for each browser. While testing, report any bugs as comments in the issue with screenshots. Here is a template:
 
@@ -379,8 +382,11 @@ QA: {browser} on {OS}
 DESCRIPTION:
 While testing, report any bugs as comments in the issue with screenshots.
 
-## Mobile and tablet device orientation
+## Mobile device orientation
 - Test all devices in portrait orientation
+
+## Tablet device orientation
+- Test all devices in both portrait and landscape orientation
 
 ## Testing Safari on iOS
 - Use the Xcode Simulator
@@ -390,18 +396,27 @@ While testing, report any bugs as comments in the issue with screenshots.
 - Check iPad (5th generation)
 
 ### Safari on iOS 9.3
-- iOS 9 usage can probably be attributed to older iPads, so check the iPad 2 running iOS 9.3
+- iOS 9 usage can probably be attributed to older iPads, so check the iPad Air running iOS 9.3
 
 ## Testing Android (7.0, 6.0, 5.1, 4.4)
 - Use the Virtual Device Manager found in Android Studio
 - Check Galaxy Nexus (360 x 640 viewport equivalent)
 - Check Galaxy Nexus 9 (728 x 1024 viewport equivalent)
 
+## Testing Amazon Silk on Fire OS
+- CrossBrowserTesting does not have any Kindle Fire devices available
+- BrowserStack offers Kindle Fire HDX 7 (v4.3) and Kindle Fire HD 8.9 (v4)
+- SauceLabs offers Kindle Fire HDX 7 (v4.4.0) and Kindle Fire HD 8.9 (v4.0.4)
+
 For each browser check that:
 - [ ] Layout matches PSDs
+- [ ] Resize window to confirm layout handles responsiveness (desktop only)
+  - [ ] Height from 768px to 1080px (including OS and browser chrome)
+  - [ ] Width from 1024px to 1920px (including OS and browser chrome)
 - [ ] Site navigation functions on all pages
 - [ ] Sticky ISI or floating ISI functions as expected
 - [ ] All interstitials function and appear as expected
+- [ ] Any custom or unique UI elements (accordions, content tabs, "back to top" buttons, etc...) function and appear as expected
 - [ ] Search functions as expected
 - [ ] All forms function as expected
 - [ ] No computer code (e.g., HTML, JavaScript etc.) displays as contextual content on any pages
