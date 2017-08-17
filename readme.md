@@ -30,6 +30,8 @@ After development is complete, validate content and layout. Validate every updat
 - Desktop PSD
 - Mobile PSD
 
+Once self-QA of each page is complete, assign the issue to the site's peer QA resource.
+
 Create a GitHub issue for each page with a description containing a task for each item. Here is a template:
 
 ```
@@ -50,9 +52,9 @@ Validate page against:
 - [ ] Wireframes
 - [ ] Desktop PSD
 - [ ] Mobile PSD
-```
 
-Once self-QA of each page is complete, assign the issue to the site's peer QA resource.
+Once self-QA of this page is complete, assign the issue to the site's peer QA resource.
+```
 
 # Peer QA
 
