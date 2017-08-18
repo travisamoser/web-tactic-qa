@@ -389,7 +389,7 @@ While testing, report any bugs as comments in the issue with screenshots.
 - Test all devices in both portrait and landscape orientation
 
 ## Testing Safari on iOS
-- Use the Xcode Simulator
+- Use the Xcode Simulator or physical devices
 
 ### Safari on iOS 10.3
 - Check all three phone form-factors (iPhone SE, iPhone 7, iPhone 7+)
