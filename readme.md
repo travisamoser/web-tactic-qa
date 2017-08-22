@@ -410,7 +410,7 @@ While testing, report any bugs as comments in the issue with screenshots.
 
 For each browser check that:
 - [ ] Layout matches PSDs
-- [ ] Resize window to confirm layout handles responsiveness (desktop only)
+- [ ] Layout handles responsiveness when window is resized (desktop only)
   - [ ] Height from 768px to 1080px (including OS and browser chrome)
   - [ ] Width from 1024px to 1920px (including OS and browser chrome)
 - [ ] Site navigation functions on all pages
