@@ -5,21 +5,22 @@
 
 **[Peer QA](#peer-qa)**
 1. [Content and layout](#content-and-layout)
-2. [Analytics](#analytics)
-3. [Redirects](#redirects)
-4. [Orphans](#orphans)
-5. [Search](#search)
-6. [Forms](#forms)
-7. [Broken or redirected assets and links](#broken-or-redirected-assets-and-links)
-8. [Code](#code)
+2. [Accessibility](#accessibility)
+3. [Analytics](#analytics)
+4. [Redirects](#redirects)
+5. [Orphans](#orphans)
+6. [Search](#search)
+7. [Forms](#forms)
+8. [Broken or redirected assets and links](#broken-or-redirected-assets-and-links)
+9. [Code](#code)
 
-    8.1. [HTML](#html)
+    9.1. [HTML](#html)
 
-    8.2. [JavaScript](#javascript)
+    9.2. [JavaScript](#javascript)
 
-    8.2. [Sass/CSS](#sasscss)
-9. [Misc](#misc)
-10. [Browsers](#browsers)
+    9.3. [Sass/CSS](#sasscss)
+10. [Misc](#misc)
+11. [Browsers](#browsers)
 
 
 # Developer self-QA
@@ -67,6 +68,51 @@ After Developer Self-QA is complete, validate content and layout. Validate every
 - Mobile PSD
 
 This validation occurs after the developer has first QA'd the page themselves and then assigned the GitHub issue to the peer QA resource.
+
+## Accessibility
+Use [pa11y](https://www.npmjs.com/package/pa11y) for accessibility testing.
+
+This command will output all critical errors for the page, while ignoring warnings and notices and ignoring an element with the ID `myIframe`. Run the command for each page that needs tested.
+```
+pa11y http://www.google.com --ignore "warning;notice" --hide-elements "#myIframe"
+```
+
+Use [pa11y-ci](https://www.npmjs.com/package/pa11y-ci) to run accessibility tests against multiple URLs at once. After install, create a `.pa11yci` file.
+
+```json
+{
+  "defaults": {
+    "hideElements": "#myIframe",
+    "ignore": [ "notice", "warning" ]
+  },
+  "urls": [
+    "http://www.google.com/page1.html",
+    "http://www.google.com/page2.html",
+    "http://www.google.com/page3.html"
+  ]
+}
+```
+
+Then simply run:
+
+```
+pa11y-ci
+```
+
+Create a GitHub issue for accessibility testing. Here is a template:
+
+```
+TITLE:
+QA: Accessibility
+
+DESCRIPTION:
+Check accessibility of each page:
+- [ ] Site has no critical accessibility errors
+
+COMMENTS:
+- [ ] {Description of issue}
+- [ ] {Description of issue}
+```
 
 ## Analytics
 Validate that the following items are added:
@@ -235,7 +281,11 @@ COMMENTS:
 
 ### HTML
 #### HTMLHint errors and warnings
-Check the site build for HTMLHint errors and warnings. If the site's build process does not use HTMLHint check for errors with your code editor (an extension may be required).
+Check the site build for HTMLHint errors and warnings. If the site's build process does not use HTMLHint check for errors with your code editor (an extension may be required) or use the [HTMLhint NPM package](https://www.npmjs.com/package/htmlhint).
+
+```
+htmlhint "/{your-path}/**/*.{htm,html}"
+```
 
 #### W3C Markup Validation Service
 Use the W3C validation service. The Validation service can be used with a browser extension:
