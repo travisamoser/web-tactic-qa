@@ -178,13 +178,13 @@ COMMENTS:
 If an orphan check is not included in the site's build process, use `wget` to check for orphans. The following command will scrape the entire site and download all files necessary for the site. Compare the scraped site to your development folder to identify potential orphans:
 
 ```
-wget -r -E -k -p -D http://www.google.com/ http://www.google.com/
+wget -w 2 --limit-rate=128K -r -E -k -p -U Mozilla http://localhost:3001
 ```
 
 If the site is behind authentication, use this command:
 
 ```
-wget -r -E -k -p -D http://www.google.com/ http://www.google.com/ --user=XXXX.XXXX --password=XXXXXX --auth-no-challenge
+wget -w 2 --limit-rate=128K -r -E -k -p -U Mozilla http://localhost:3001 --user=XXXX.XXXX --password=XXXXXX --auth-no-challenge
 ```
 
 Create a GitHub issue for an orphan check. Here is a template:
